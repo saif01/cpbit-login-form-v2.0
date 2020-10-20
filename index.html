@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CPB-IT Portal</title>
+    <link rel="icon" href="assets/images/cpbit.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css">
+    <!-- Bootstrap-4.5 CSS-->
+    <link rel="stylesheet" href="assets/bootstrap-4.5/css/bootstrap.min.css">
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-content">
+            <div class="auth-bg">
+                <span class="r"></span>
+                <span class="r s"></span>
+                <span class="r s"></span>
+                <span class="r"></span>
+            </div>
+            <div class="card">
+                <div class="card-body">
+
+                    <div class="pb-3">
+                        <img src="assets/images/cpbit.png" class="logo mx-auto d-block rotate">
+                        <h4 class="text-center">CPB-IT Portal</h4>
+                    </div>
+
+                    <div class="alert alert-danger alert-dismissible text-center fade show" role="alert">
+                        Warning Message Here
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+
+                    <form id="loginForm" method="POST" action="">
+
+                        <div class="form-group">
+                            <label for="login">Login ID :</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fas fa-user-tie"></i></div>
+                                </div>
+                                <input id="login" type="login" class="form-control is-invalid" name="login" required autocomplete="login" placeholder="Enter Your AD User ID" autofocus>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password :</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fas fa-key"></i></div>
+                                </div>
+                                <input id="password" type="password" class="form-control" name="password" required autocomplete="current-password" placeholder="Enter Your Password">
+                            </div>
+
+                            <div class=" form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="myFunction()">
+                                <label class="form-check-label text-muted" for="exampleCheck1">Show Password</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Login Type :</label>
+                            <select name="type" class="form-control">
+                                <option value="user">As a User</option>
+                                <option value="admin">As a Admin</option>
+                            </select>
+                        </div>
+                       
+                        <button id="submit" type="submit" class="btn btn-primary btn-block">Login &nbsp&nbsp<i class="fa fa-random"></i></button>
+                       
+                       
+
+                    </form>
+
+                    <hr>
+
+                    <div class="row mt-4">
+                        <div class="col-md-6 d-none d-md-block">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdD0RAhCW8GOkh3wbsAzCDAIicBDZ4n2KcVyjG5izBs8ygkhA/viewform?usp=sf_link" target="_blank" class="text-muted"><i class="far fa-address-book"></i>&nbspRegister</a>
+                        </div>
+                        <div class="col-md-6 d-none d-md-block">
+                            <a href="{{ asset('android-app/CPB-IT.apk') }}" class="float-right text-muted" download><i class="fab fa-android"></i>&nbspApp</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Required Js -->
+    <script src="assets/js/vendor-all.min.js"></script>
+    <!-- Bootstrap-4.5 JS-->
+    <script src="assets/bootstrap-4.5/js/bootstrap.min.js"></script>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
